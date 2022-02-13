@@ -1,0 +1,55 @@
+[17:53:43.557] Global cache location 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4', safe file path 'f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/typingsafelist.json', types map path f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/typesmap.json
+[17:53:43.559] Processing cache location 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4'
+[17:53:43.559] Trying to find 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/package.json'...
+[17:53:43.573] Loaded content of 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/package.json': {"private":true,"dependencies":{"types-registry":"^0.1.563"},"devDependencies":{"@types/async":"^3.2.8","@types/atob":"^2.1.2","@types/bootstrap":"^5.1.6","@types/lz-string":"^1.3.34","@types/object-assign":"^4.0.30","@types/react":"^17.0.30","@types/react-dom":"^17.0.9","@types/sprintf":"^0.1.0","@types/testing-library__jest-dom":"^5.14.1","@types/tryer":"^1.0.2"}}
+[17:53:43.573] Loaded content of 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/package-lock.json'
+[17:53:43.587] Adding entry into typings cache: 'async' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/async/index.d.ts'
+[17:53:43.592] Adding entry into typings cache: 'atob' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/atob/index.d.ts'
+[17:53:43.596] Adding entry into typings cache: 'bootstrap' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/bootstrap/index.d.ts'
+[17:53:43.600] Adding entry into typings cache: 'lz-string' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/lz-string/index.d.ts'
+[17:53:43.603] Adding entry into typings cache: 'object-assign' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/object-assign/index.d.ts'
+[17:53:43.609] Adding entry into typings cache: 'react' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/react/index.d.ts'
+[17:53:43.613] Adding entry into typings cache: 'react-dom' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/react-dom/index.d.ts'
+[17:53:43.617] Adding entry into typings cache: 'sprintf' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/sprintf/index.d.ts'
+[17:53:43.622] Adding entry into typings cache: 'testing-library__jest-dom' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/testing-library__jest-dom/index.d.ts'
+[17:53:43.626] Adding entry into typings cache: 'tryer' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/tryer/index.d.ts'
+[17:53:43.626] Finished processing cache location 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4'
+[17:53:43.626] Process id: 17500
+[17:53:43.626] NPM location: "C:\Program Files\nodejs\npm" (explicit '--npmLocation' not  provided)
+[17:53:43.626] validateDefaultNpmLocation: false
+[17:53:43.627] Npm config file: C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/package.json
+[17:53:43.627] Updating types-registry npm package...
+[17:53:43.627] Exec: "C:\Program Files\nodejs\npm" install --ignore-scripts types-registry@latest
+[17:53:47.975]     Succeeded. stdout:
+    + types-registry@0.1.564
+    updated 1 package and audited 38 packages in 1.871s
+
+4 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+
+[17:53:47.975] Updated types-registry npm package
+[17:53:53.341] Got install request {"projectName":"/dev/null/inferredProject1*","fileNames":["f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es5.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2016.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.dom.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.dom.iterable.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.webworker.importscripts.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.scripthost.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.core.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.collection.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.generator.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.iterable.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.promise.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.proxy.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.reflect.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.symbol.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2016.array.include.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2016.full.d.ts","f:/dev/major-project/src/config.js","f:/dev/major-project/src/components/Homepage.js"],"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typeAcquisition":{"enable":true,"include":[],"exclude":[]},"unresolvedImports":[],"projectRootPath":"f:/dev/major-project/src/components","kind":"discover"}
+[17:53:53.356] Loaded safelist from types map file 'f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/typesmap.json'
+[17:53:53.356] Explicitly included types: []
+[17:53:53.358] Inferred typings from unresolved imports: []
+[17:53:53.358] Result: {"cachedTypingPaths":[],"newTypingNames":[],"filesToWatch":["f:/dev/major-project/src/bower_components","f:/dev/major-project/src/node_modules","f:/dev/major-project/src/components/bower_components","f:/dev/major-project/src/components/node_modules"]}
+[17:53:53.358] Finished typings discovery: {"cachedTypingPaths":[],"newTypingNames":[],"filesToWatch":["f:/dev/major-project/src/bower_components","f:/dev/major-project/src/node_modules","f:/dev/major-project/src/components/bower_components","f:/dev/major-project/src/components/node_modules"]}
+[17:53:53.359] DirectoryWatcher:: Added:: WatchInfo: f:/dev/major-project/src/bower_components
+[17:53:53.359] DirectoryWatcher:: Added:: WatchInfo: f:/dev/major-project/src/bower_components 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[17:53:53.361] Elapsed:: 1.4755999445915222ms DirectoryWatcher:: Added:: WatchInfo: f:/dev/major-project/src/bower_components 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[17:53:53.361] DirectoryWatcher:: Added:: WatchInfo: f:/dev/major-project/src/node_modules
+[17:53:53.361] DirectoryWatcher:: Added:: WatchInfo: f:/dev/major-project/src/node_modules 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[17:53:53.361] Elapsed:: 0.13419997692108154ms DirectoryWatcher:: Added:: WatchInfo: f:/dev/major-project/src/node_modules 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[17:53:53.362] DirectoryWatcher:: Added:: WatchInfo: f:/dev/major-project/src/components/bower_components
+[17:53:53.362] DirectoryWatcher:: Added:: WatchInfo: f:/dev/major-project/src/components/bower_components 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[17:53:53.362] Elapsed:: 0.11289995908737183ms DirectoryWatcher:: Added:: WatchInfo: f:/dev/major-project/src/components/bower_components 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[17:53:53.362] DirectoryWatcher:: Added:: WatchInfo: f:/dev/major-project/src/components/node_modules
+[17:53:53.362] DirectoryWatcher:: Added:: WatchInfo: f:/dev/major-project/src/components/node_modules 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[17:53:53.363] Elapsed:: 0.1371999979019165ms DirectoryWatcher:: Added:: WatchInfo: f:/dev/major-project/src/components/node_modules 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[17:53:53.363] Sending response:
+    {"projectName":"/dev/null/inferredProject1*","typeAcquisition":{"enable":true,"include":[],"exclude":[]},"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typings":[],"unresolvedImports":[],"kind":"action::set"}
+[17:53:53.363] Response has been sent.
+[17:53:53.363] No new typings were requested as a result of typings discovery
