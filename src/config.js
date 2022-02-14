@@ -1,5 +1,18 @@
-export const OWNERSHIP_ADDRESS = '0xa3fAc3372Add06Ccb095fFF64f403c62209632ad'
+export const OWNERSHIP_ADDRESS = '0x65c00CF03a806686Cde4f63f3F9FFe98eB140415'
 export const OWNERSHIP_ABI=[
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256[]",
+				"name": "items",
+				"type": "uint256[]"
+			}
+		],
+		"name": "AllItems",
+		"type": "event"
+	},
 	{
 		"anonymous": false,
 		"inputs": [
@@ -105,6 +118,13 @@ export const OWNERSHIP_ABI=[
 			}
 		],
 		"name": "createItem",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getItems",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
