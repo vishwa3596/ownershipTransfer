@@ -1,4 +1,4 @@
-export const OWNERSHIP_ADDRESS = '0x65c00CF03a806686Cde4f63f3F9FFe98eB140415'
+export const OWNERSHIP_ADDRESS = '0x70A52a12b1DAec0b2603585990b6D3C7ee575DD7'
 export const OWNERSHIP_ABI=[
 	{
 		"anonymous": false,
@@ -44,6 +44,45 @@ export const OWNERSHIP_ABI=[
 			{
 				"indexed": false,
 				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			}
+		],
+		"name": "getCurrentOwner",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "s",
+				"type": "string"
+			}
+		],
+		"name": "outputString",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address[]",
+				"name": "pastOwners",
+				"type": "address[]"
+			}
+		],
+		"name": "pastOwners",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
 				"name": "_to",
 				"type": "address"
 			},
@@ -56,6 +95,19 @@ export const OWNERSHIP_ABI=[
 		],
 		"name": "shiftBetweenOwner",
 		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			}
+		],
+		"name": "Deviceresponse",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
 	},
 	{
 		"inputs": [
@@ -81,6 +133,11 @@ export const OWNERSHIP_ABI=[
 				"internalType": "uint256",
 				"name": "ownershipType",
 				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "tempOwner",
+				"type": "address"
 			}
 		],
 		"stateMutability": "view",
@@ -108,6 +165,19 @@ export const OWNERSHIP_ABI=[
 		"inputs": [
 			{
 				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			}
+		],
+		"name": "checkDeviceTamper",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
 				"name": "_ownershipType",
 				"type": "uint256"
 			},
@@ -115,6 +185,16 @@ export const OWNERSHIP_ABI=[
 				"internalType": "uint256",
 				"name": "_id",
 				"type": "uint256"
+			},
+			{
+				"internalType": "uint256[]",
+				"name": "challenge",
+				"type": "uint256[]"
+			},
+			{
+				"internalType": "uint256[]",
+				"name": "hardwareResponse",
+				"type": "uint256[]"
 			}
 		],
 		"name": "createItem",
@@ -145,7 +225,20 @@ export const OWNERSHIP_ABI=[
 				"type": "address"
 			}
 		],
-		"stateMutability": "view",
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_idItem",
+				"type": "uint256"
+			}
+		],
+		"name": "getTempOwner",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -176,32 +269,57 @@ export const OWNERSHIP_ABI=[
 		"inputs": [
 			{
 				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			}
+		],
+		"name": "revokeOwnerShip",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
 				"name": "_idx",
 				"type": "uint256"
 			}
 		],
 		"name": "showOwnerShipHistory",
-		"outputs": [
-			{
-				"internalType": "address[]",
-				"name": "",
-				"type": "address[]"
-			}
-		],
-		"stateMutability": "view",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "val",
-		"outputs": [
+		"inputs": [
 			{
 				"internalType": "uint256",
-				"name": "",
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256[]",
+				"name": "tempHardwareResponse",
+				"type": "uint256[]"
+			}
+		],
+		"name": "tamperWithDevice",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "id",
 				"type": "uint256"
 			}
 		],
-		"stateMutability": "view",
+		"name": "updateTheDeviceResponse",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	}
 ]
