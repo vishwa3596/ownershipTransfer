@@ -1,4 +1,4 @@
-export const OWNERSHIP_ADDRESS = '0x70A52a12b1DAec0b2603585990b6D3C7ee575DD7'
+export const OWNERSHIP_ADDRESS = '0x80f789673d1e1c132914fba9EDa83eCE4038d066'
 export const OWNERSHIP_ABI=[
 	{
 		"anonymous": false,
@@ -323,3 +323,7 @@ export const OWNERSHIP_ABI=[
 		"type": "function"
 	}
 ]
+
+
+
+// side chain.

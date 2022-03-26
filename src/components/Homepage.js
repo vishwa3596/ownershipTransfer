@@ -53,14 +53,12 @@ const Homepage = () => {
 	return(
 		<Grid container direction="row" justify="center">
 			<Grid item xs={12} align="center" sx={{
-				margin: "10px",
+				margin: "1px",
 				border: 1,
 				borderRadius: "10px",
 				borderColor: "#DCDCDC"
 			}}>
-				<Typography sx={{
-					fontWeight: "600"
-				}}>Active Account</Typography>
+				<h1 className="text-2xl font-bold underline">Active Account</h1>
 				<Typography>{account}</Typography>	
 			</Grid>
 			<Grid item xs={12} align="center">

@@ -3,17 +3,21 @@ import { useEffect, useState } from "react";
 import Web3 from "web3";
 import { OWNERSHIP_ABI, OWNERSHIP_ADDRESS } from "../config";
 import CreateItem from "./CreateItem";
-import { Grid, Typography } from "@mui/material";
+import { Grid, Tab, Typography } from "@mui/material";
 import RequestDeclined from "./RequestDeclined";
 import RequestConfim from "./RequestConfim";
 import Request from "./Request";
 import TamperList from "./TamperList";
+import { TabsContext } from "@mui/base";
+import TabList from '@mui/lab/TabList';
+import { Box } from "@mui/system";
 
 const web3 = new Web3(new Web3.providers.HttpProvider("HTTP://127.0.0.1:7545"));
 
 const contract = new web3.eth.Contract(OWNERSHIP_ABI, OWNERSHIP_ADDRESS);
 
 const ItemList = ({account}) => {
+	const [tabValue, onUpdatingTabValue] = useState('1');
 	const [ItemList, onUpdatingItemList] = useState([]);
 	const [requestArray, onUpdatingRequestArray] = useState([])
 	const [requestConfim, onConfirmRequest] = useState([]);
@@ -72,7 +76,7 @@ const ItemList = ({account}) => {
 		}
 		appendToRequestArray(value);
 	}
-
+	
 	const createItem = async (id, type) => {
 		console.log(ItemList.length);
 		if(ItemList.length > 0){
