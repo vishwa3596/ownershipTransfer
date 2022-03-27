@@ -93,42 +93,28 @@ const EachItem = ({account, Id, selectedItem, ItemOwner, ItemTempOwner, updating
 			alignContent: "center",
 			marginTop: "10px"
 		}}>
-			<Grid item xs={1} sx={{
-				borderLeft: 1,
-			}}>
+			<Grid item xs={1}>
 				<Typography>{Id}</Typography>
 			</Grid>
-			<Grid item xs={2} sx={{
-				borderLeft: 1,
-				borderColor: "#DCDCDC"
-			}}>
+			<Grid item xs={2}>
 				<Button sx={{
 					textTransform: "none",
 					
 				}} disabled={ItemOwner === account?true:false} onClick={askPermanentOwnerShip} 
 				variant="contained" color="primary">Ask Permanent OwnerShip</Button>
 			</Grid>
-			<Grid item xs={2} sx={{
-				borderLeft: 1,
-				borderColor: "#DCDCDC"
-			}}>
+			<Grid item xs={2}>
 				<Button sx={{
 					textTransform: "none",
 				}} disabled={ItemTempOwner === account?true:false} onClick={askTemporaryOwnerShip} 
 				variant="contained" color="primary">Ask Temporary OwnerShip</Button>
 			</Grid>
-			<Grid item xs={2} sx={{
-				borderLeft: 1,
-				borderColor: "#DCDCDC"
-			}}>
+			<Grid item xs={2}>
 				<Button sx={{
 					textTransform: "none"
 				}} onClick={showOwnerShip} variant="contained" color="secondary">SeeOwnerShipHistory</Button>
 			</Grid>
-			<Grid item xs={2} sx={{
-				borderLeft: 1,
-				borderColor: "#DCDCDC"
-			}}>
+			<Grid item xs={2}>
 				{ItemTempOwner === account && account !== ItemOwner ? <Button sx={{
 					textTransform: "none"
 				}} onClick={onTamperingDevice} variant="contained" color="secondary">Tamper Device</Button>:

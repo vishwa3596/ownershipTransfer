@@ -3,21 +3,18 @@ import { useEffect, useState } from "react";
 import Web3 from "web3";
 import { OWNERSHIP_ABI, OWNERSHIP_ADDRESS } from "../config";
 import CreateItem from "./CreateItem";
-import { Grid, Tab, Typography } from "@mui/material";
+import { AppBar, CssBaseline, Grid, Tab, Tabs, Toolbar, Typography } from "@mui/material";
 import RequestDeclined from "./RequestDeclined";
 import RequestConfim from "./RequestConfim";
 import Request from "./Request";
 import TamperList from "./TamperList";
-import { TabsContext } from "@mui/base";
-import TabList from '@mui/lab/TabList';
-import { Box } from "@mui/system";
 
 const web3 = new Web3(new Web3.providers.HttpProvider("HTTP://127.0.0.1:7545"));
 
 const contract = new web3.eth.Contract(OWNERSHIP_ABI, OWNERSHIP_ADDRESS);
 
 const ItemList = ({account}) => {
-	const [tabValue, onUpdatingTabValue] = useState('1');
+	const [tabValue, onUpdatingTabValue] = useState('items');
 	const [ItemList, onUpdatingItemList] = useState([]);
 	const [requestArray, onUpdatingRequestArray] = useState([])
 	const [requestConfim, onConfirmRequest] = useState([]);
@@ -166,54 +163,83 @@ const ItemList = ({account}) => {
 	}
 
 	return (
-		<Grid container direction="column" justifyContent="space-between" sx={{
-			marginTop: "10px"
-		}}>
+		<Grid container direction="row" >
 			<Grid item xs={12}>
-				<Typography sx={{
-					fontWeight: "600",
-					fontSize: "1.5rem"
-				}}>Item</Typography>
+				<CssBaseline />
+					<Toolbar sx={{
+						justifyContent: "center",
+						columnGap: "30px",
+						bgcolor: "#ddfada"
+					}}>
+						<Typography onClick={() => onUpdatingTabValue("items")} sx={{
+							fontWeight: "900",
+							":hover": {
+								cursor: "pointer"
+							}
+						}}>Items</Typography>
+						<Typography onClick={() => onUpdatingTabValue("create")} sx={{
+							fontWeight: "900",
+							":hover": {
+								cursor: "pointer"
+							}
+						}}>CreateItems</Typography>
+						<Typography onClick={() => onUpdatingTabValue("notification")} sx={{
+							fontWeight: "900",
+							":hover": {
+								cursor: "pointer"
+							}
+						}}>Notification</Typography>
+					</Toolbar>
 			</Grid>
-			<Grid item xs={12} sx={{
-				height: "500px"
-			}}>
-				{ItemList.length > 0?ItemList.map((e) =><EachItem 
-					updatingTamperedDeviceList={updatingTamperedDeviceList} 
-					account={account} 
-					key = {e.id} 
-					selectedItem={selectedItem} 
-					Id={e.id} 
-					ItemOwner={e.owner} 
-					ItemTempOwner={e.tempOwner}/>):<></>
-				}
-			</Grid>
-			<Grid container direction="row" justifyContent="space-between" >
-				<Grid item xs={4} align="center">
+			{tabValue === "items" && 
+			<Grid item xs={12}>
+				<Grid container direction="column" justifyContent="space-between" sx={{
+					marginTop: "10px"
+				}}>
+					<Grid item xs={12}>
+						<Typography sx={{
+							fontWeight: "600",
+							fontSize: "1.5rem"
+						}}>Item</Typography>
+					</Grid>
+					<Grid item xs={12} sx={{
+						height: "500px"
+					}}>
+						{ItemList.length > 0?ItemList.map((e) =><EachItem 
+							updatingTamperedDeviceList={updatingTamperedDeviceList} 
+							account={account} 
+							key = {e.id} 
+							selectedItem={selectedItem} 
+							Id={e.id} 
+							ItemOwner={e.owner} 
+							ItemTempOwner={e.tempOwner}/>):<></>
+						}
+					</Grid>
+				</Grid>
+			</Grid>}
+			{tabValue === "create" && 
+				<Grid item xs={12} sx={{
+					width: "100%"
+				}}>
 					<CreateItem createItem = {createItem}/>
 				</Grid>
-				<Grid item xs={7} sx={{
-					border: 1,
-					borderRadius: "10px",
-					borderColor: "#DCDCDC",
-					marginTop: "10px",
-					marginRight:"10px"
-				}}>
-					<Grid item xs={12} align = "center">
-						<Request account={account} requestArray={requestArray} confirmingRequest={confirmingRequest}  declineRequest={declineRequest} />
-					</Grid>
-					<Grid item xs={12} align = "center">
-						<RequestDeclined account={account} requestArray={requestDeclined} />
-					</Grid>
-					<Grid item xs={12} align = "center">
-						<RequestConfim account={account} requestArray={requestConfim} />
-					</Grid>
-					<Grid item xs={12} align="center">
-						<TamperList onRevokingTempOwnerShip={onRevokingTempOwnerShip} account={account} deviceTamperList={deviceTamperList} />
-					</Grid>
-				</Grid>		
-			</Grid>
+			}
+			{tabValue === "notification" && <>
+			<Grid item xs={12} align = "center">
+							<Request account={account} requestArray={requestArray} confirmingRequest={confirmingRequest}  declineRequest={declineRequest} />
+						</Grid>
+						<Grid item xs={12} align = "center">
+							<RequestDeclined account={account} requestArray={requestDeclined} />
+						</Grid>
+						<Grid item xs={12} align = "center">
+							<RequestConfim account={account} requestArray={requestConfim} />
+						</Grid>
+						<Grid item xs={12} align="center">
+							<TamperList onRevokingTempOwnerShip={onRevokingTempOwnerShip} account={account} deviceTamperList={deviceTamperList} />
+						</Grid>
+			</>}
 		</Grid>
+		
 	)
 }
 
